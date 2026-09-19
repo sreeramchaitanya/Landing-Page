@@ -23,7 +23,6 @@ Do NOT use placeholder IDs. No Lead/Contact events on this page by design. -->
   .err-num em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;-webkit-text-stroke:0;color:#e0451f}
   .ty-card h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin:10px 0 12px}
   .ty-sub{color:#6b6357;font-size:1.02rem;max-width:26em;margin:0 auto}
-  .ty-sub code{background:#fff;border:1px solid #d8cfb9;border-radius:8px;padding:1px 8px;font-size:.85em;word-break:break-all}
   .ty-links{list-style:none;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:26px 0 4px;padding:0}
   .ty-links a{text-decoration:none;font-size:.85rem;font-weight:600;border:1px solid #d8cfb9;background:rgba(255,255,255,.6);border-radius:100px;padding:9px 16px;transition:all .25s}
   .ty-links a:hover{background:#1b1814;border-color:#1b1814;color:#fff}
@@ -55,7 +54,7 @@ Do NOT use placeholder IDs. No Lead/Contact events on this page by design. -->
       <div class="err-num" aria-hidden="true">4<em>0</em>4</div>
       <p class="eyebrow" style="justify-content:center">Lost in the studio?</p>
       <h1>This page wandered off.</h1>
-      <p class="ty-sub">The link you followed doesn't exist — it may have moved or been deleted.<br><span style="font-size:.85rem">Tried to visit: <code id="badPath">—</code></span></p>
+      <p class="ty-sub">The link you followed doesn't exist — it may have moved or been deleted.</p>
       <ul class="ty-links">
         <li><a href="index.html#pricing">Pricing</a></li>
         <li><a href="index.html#work">Work</a></li>
@@ -80,7 +79,6 @@ Do NOT use placeholder IDs. No Lead/Contact events on this page by design. -->
 
 <script>
 (function () {
-  try { document.getElementById("badPath").textContent = location.pathname || "/"; } catch (e) {}
   var pf = document.getElementById("progressFill");
   addEventListener("scroll", function () {
     var h = document.documentElement.scrollHeight - innerHeight;
