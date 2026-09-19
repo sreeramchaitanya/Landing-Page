@@ -414,5 +414,27 @@ is known. Add e.g. "url":"https://YOUR-CUSTOM-DOMAIN/" to Person/ProfessionalSer
 <script src="https://unpkg.com/split-type"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/anim.js"></script>
+
+<script>
+document.addEventListener('click', function (event) {
+    const link = event.target.closest('a');
+
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+
+    const isWhatsAppLink =
+        href.includes('wa.me') ||
+        href.includes('whatsapp.com') ||
+        href.includes('api.whatsapp.com');
+
+    if (isWhatsAppLink) {
+        gtag('event', 'whatsapp_click', {
+            button_text: link.innerText.trim() || 'WhatsApp Button',
+            page_path: window.location.pathname
+        });
+    }
+});
+</script>
 </body>
 </html>
