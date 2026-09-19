@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap requires the final custom domain. Once known, add:
-# Sitemap: https://YOUR-CUSTOM-DOMAIN/sitemap.xml
+Sitemap: https://sreeramchaitanya.dev/sitemap.xml
